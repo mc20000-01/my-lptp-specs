@@ -1,0 +1,2274 @@
+=== Deep Hardware Scan Report ===
+Timestamp: 2025-10-17_19-25-34
+Host: mc20000-laptop
+
+
+=== System Summary (lshw) ===
+computer
+    description: Notebook
+    product: Latitude 5410 (09A0)
+    vendor: Dell Inc.
+    serial: [REMOVED]
+    width: 64 bits
+    capabilities: smbios-3.2.0 dmi-3.2.0 smp vsyscall32
+    configuration: boot=normal chassis=notebook family=Latitude sku=09A0 uuid=[REMOVED]
+  *-core
+       description: Motherboard
+       product: 02FGH4
+       vendor: Dell Inc.
+       physical id: 0
+       version: A01
+       serial: [REMOVED]
+     *-firmware
+          description: BIOS
+          vendor: Dell Inc.
+          physical id: 0
+          version: 1.38.1
+          date: 08/27/2025
+          size: 64KiB
+          capacity: 24MiB
+          capabilities: pci pnp upgrade shadowing cdboot bootselect edd int13floppynec int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer acpi usb smartbattery biosbootspecification netboot uefi
+     *-memory
+          description: System Memory
+          physical id: 1c
+          slot: System board or motherboard
+          size: 16GiB
+        *-bank:0
+             description: SODIMM DDR4 Synchronous 3200 MHz (0.3 ns)
+             product: 8ATF1G64HZ-3G2J1
+             vendor: Micron Technology
+             physical id: 0
+             serial: [REMOVED]
+             slot: DIMM A
+             size: 8GiB
+             width: 64 bits
+             clock: 3200MHz (0.3ns)
+        *-bank:1
+             description: SODIMM DDR4 Synchronous 3200 MHz (0.3 ns)
+             product: 8ATF1G64HZ-3G2J1
+             vendor: Micron Technology
+             physical id: 1
+             serial: [REMOVED]
+             slot: DIMM B
+             size: 8GiB
+             width: 64 bits
+             clock: 3200MHz (0.3ns)
+     *-cache:0
+          description: L1 cache
+          physical id: 40
+          slot: L1 Cache
+          size: 256KiB
+          capacity: 256KiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=1
+     *-cache:1
+          description: L2 cache
+          physical id: 41
+          slot: L2 Cache
+          size: 1MiB
+          capacity: 1MiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=2
+     *-cache:2
+          description: L3 cache
+          physical id: 42
+          slot: L3 Cache
+          size: 6MiB
+          capacity: 6MiB
+          capabilities: synchronous internal write-back unified
+          configuration: level=3
+     *-cpu
+          description: CPU
+          product: Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+          vendor: Intel Corp.
+          physical id: 43
+          bus info: cpu@0
+          version: 6.142.12
+          slot: U3E1
+          size: 3799MHz
+          capacity: 4200MHz
+          width: 64 bits
+          clock: 100MHz
+          capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp x86-64 constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp vnmi md_clear flush_l1d arch_capabilities cpufreq
+          configuration: cores=4 enabledcores=4 microcode=256 threads=8
+     *-pci
+          description: Host bridge
+          product: Comet Lake-U v1 4c Host Bridge/DRAM Controller
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 0c
+          width: 32 bits
+          clock: 33MHz
+          configuration: driver=skl_uncore
+          resources: irq:0
+        *-display
+             description: VGA compatible controller
+             product: CometLake-U GT2 [UHD Graphics]
+             vendor: Intel Corporation
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             logical name: /dev/fb0
+             version: 02
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pciexpress msi pm vga_controller bus_master cap_list rom fb
+             configuration: depth=32 driver=i915 latency=0 resolution=1920,1080
+             resources: irq:153 memory:90000000-90ffffff memory:80000000-8fffffff ioport:3000(size=64) memory:c0000-dffff
+        *-generic:0
+             description: Signal processing controller
+             product: Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem
+             vendor: Intel Corporation
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             version: 0c
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm cap_list
+             configuration: driver=proc_thermal latency=0
+             resources: irq:16 memory:91330000-91337fff
+        *-generic:1 UNCLAIMED
+             description: System peripheral
+             product: Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model
+             vendor: Intel Corporation
+             physical id: 8
+             bus info: pci@0000:00:08.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: msi pm cap_list
+             configuration: latency=0
+             resources: memory:9134d000-9134dfff
+        *-generic:2
+             description: Signal processing controller
+             product: Comet Lake Thermal Subsytem
+             vendor: Intel Corporation
+             physical id: 12
+             bus info: pci@0000:00:12.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi cap_list
+             configuration: driver=intel_pch_thermal latency=0
+             resources: irq:16 memory:9134c000-9134cfff
+        *-usb
+             description: USB controller
+             product: Comet Lake PCH-LP USB 3.1 xHCI Host Controller
+             vendor: Intel Corporation
+             physical id: 14
+             bus info: pci@0000:00:14.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi xhci bus_master cap_list
+             configuration: driver=xhci_hcd latency=0
+             resources: irq:123 memory:91320000-9132ffff
+           *-usbhost:0
+                product: xHCI Host Controller
+                vendor: Linux 6.14.0-33-generic xhci-hcd
+                physical id: 0
+                bus info: usb@1
+                logical name: usb1
+                version: 6.14
+                capabilities: usb-2.00
+                configuration: driver=hub slots=12 speed=480Mbit/s
+              *-usb:0
+                   description: Video
+                   product: Integrated_Webcam_HD
+                   vendor: CNFHH53Q4014400B0790
+                   physical id: 6
+                   bus info: usb@1:6
+                   version: 82.67
+                   serial: [REMOVED]
+                   capabilities: usb-2.01
+                   configuration: driver=uvcvideo maxpower=500mA speed=480Mbit/s
+              *-usb:1
+                   description: Bluetooth wireless interface
+                   product: AX201 Bluetooth
+                   vendor: Intel Corp.
+                   physical id: a
+                   bus info: usb@1:a
+                   version: 0.02
+                   capabilities: bluetooth usb-2.01
+                   configuration: driver=btusb maxpower=100mA speed=12Mbit/s
+           *-usbhost:1
+                product: xHCI Host Controller
+                vendor: Linux 6.14.0-33-generic xhci-hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 6.14
+                capabilities: usb-3.10
+                configuration: driver=hub slots=6 speed=10000Mbit/s
+        *-memory UNCLAIMED
+             description: RAM memory
+             product: Comet Lake PCH-LP Shared SRAM
+             vendor: Intel Corporation
+             physical id: 14.2
+             bus info: pci@0000:00:14.2
+             version: 00
+             width: 64 bits
+             clock: 33MHz (30.3ns)
+             capabilities: pm cap_list
+             configuration: latency=0
+             resources: memory:91342000-91343fff memory:9134b000-9134bfff
+        *-network:0
+             description: Wireless interface
+             product: Comet Lake PCH-LP CNVi WiFi
+             vendor: Intel Corporation
+             physical id: 14.3
+             bus info: pci@0000:00:14.3
+             logical name: wlo1
+             version: 00
+             serial: [REMOVED]
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical wireless
+             configuration: broadcast=yes driver=iwlwifi driverversion=6.14.0-33-generic firmware=77.b405f9d4.0 QuZ-a0-hr-b0-77.u ip=[REMOVED] latency=0 link=yes multicast=yes wireless=IEEE 802.11
+             resources: irq:16 memory:9133c000-9133ffff
+        *-serial:0
+             description: Serial bus controller
+             product: Serial IO I2C Host Controller
+             vendor: Intel Corporation
+             physical id: 15
+             bus info: pci@0000:00:15.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:16 memory:7e800000-7e800fff
+        *-serial:1
+             description: Serial bus controller
+             product: Comet Lake Serial IO I2C Host Controller
+             vendor: Intel Corporation
+             physical id: 15.1
+             bus info: pci@0000:00:15.1
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:17 memory:7e801000-7e801fff
+        *-communication
+             description: Communication controller
+             product: Comet Lake Management Engine Interface
+             vendor: Intel Corporation
+             physical id: 16
+             bus info: pci@0000:00:16.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=mei_me latency=0
+             resources: irq:133 memory:91348000-91348fff
+        *-sata
+             description: SATA controller
+             product: Comet Lake SATA AHCI Controller
+             vendor: Intel Corporation
+             physical id: 17
+             bus info: pci@0000:00:17.0
+             version: 00
+             width: 32 bits
+             clock: 66MHz
+             capabilities: sata msi pm ahci_1.0 bus_master cap_list
+             configuration: driver=ahci latency=0
+             resources: irq:132 memory:91340000-91341fff memory:91347000-913470ff ioport:3090(size=8) ioport:3080(size=4) ioport:3060(size=32) memory:91346000-913467ff
+        *-serial:2
+             description: Serial bus controller
+             product: Comet Lake Serial IO I2C Host Controller
+             vendor: Intel Corporation
+             physical id: 19
+             bus info: pci@0000:00:19.0
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm bus_master cap_list
+             configuration: driver=intel-lpss latency=0
+             resources: irq:32 memory:7e802000-7e802fff
+        *-pci:0
+             description: PCI bridge
+             product: Comet Lake PCI Express Root Port #8
+             vendor: Intel Corporation
+             physical id: 1c
+             bus info: pci@0000:00:1c.0
+             version: f0
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:121 memory:91200000-912fffff
+           *-generic
+                description: MMC Host
+                product: RTS525A PCI Express Card Reader
+                vendor: Realtek Semiconductor Co., Ltd.
+                physical id: 0
+                bus info: pci@0000:01:00.0
+                logical name: mmc0
+                version: 01
+                width: 32 bits
+                clock: 33MHz
+                capabilities: pm msi pciexpress bus_master cap_list
+                configuration: driver=rtsx_pci latency=0
+                resources: irq:131 memory:91200000-91200fff
+        *-pci:1
+             description: PCI bridge
+             product: Comet Lake PCI Express Root Port #13
+             vendor: Intel Corporation
+             physical id: 1d
+             bus info: pci@0000:00:1d.0
+             version: f0
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+             configuration: driver=pcieport
+             resources: irq:122 memory:91100000-911fffff
+           *-nvme
+                description: NVMe device
+                product: SAMSUNG MZVKW512HMJP-000H1
+                vendor: Samsung Electronics Co Ltd
+                physical id: 0
+                bus info: pci@0000:02:00.0
+                logical name: /dev/nvme0
+                version: CXA74H0Q
+                serial: [REMOVED]
+                width: 64 bits
+                clock: 33MHz
+                capabilities: nvme pm msi pciexpress msix nvm_express bus_master cap_list
+                configuration: driver=nvme latency=0 nqn=nqn.2014.08.org.nvmexpress:144d144dS34CNX0K307615      SAMSUNG MZVKW512HMJP-000H1 state=live
+                resources: irq:16 memory:91100000-91103fff
+              *-namespace:0
+                   description: NVMe disk
+                   physical id: 0
+                   logical name: hwmon3
+              *-namespace:1
+                   description: NVMe disk
+                   physical id: 2
+                   logical name: /dev/ng0n1
+              *-namespace:2
+                   description: NVMe disk
+                   physical id: 1
+                   bus info: nvme@0:1
+                   logical name: /dev/nvme0n1
+                   size: 476GiB (512GB)
+                   capabilities: gpt-1.00 partitioned partitioned:gpt
+                   configuration: guid=be8442d5-3eaf-4ef6-8f1e-a0be82d97a7f logicalsectorsize=512 sectorsize=512 wwid=eui.002538c381b03cfa
+                 *-volume:0
+                      description: Windows FAT volume
+                      vendor: mkfs.fat
+                      physical id: 1
+                      bus info: nvme@0:1,1
+                      logical name: /dev/nvme0n1p1
+                      logical name: /boot/efi
+                      version: FAT32
+                      serial: [REMOVED]
+                      size: 1073MiB
+                      capacity: 1074MiB
+                      capabilities: boot fat initialized
+                      configuration: FATs=2 filesystem=fat mount.fstype=vfat mount.options=rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro state=mounted
+                 *-volume:1
+                      description: EXT4 volume
+                      vendor: Linux
+                      physical id: 2
+                      bus info: nvme@0:1,2
+                      logical name: /dev/nvme0n1p2
+                      logical name: /
+                      version: 1.0
+                      serial: [REMOVED]
+                      size: 254GiB
+                      capacity: 254GiB
+                      capabilities: journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                      configuration: created=2025-10-16 17:12:42 filesystem=ext4 lastmountpoint=/ modified=2025-10-17 18:32:46 mount.fstype=ext4 mount.options=rw,relatime mounted=2025-10-16 22:01:10 state=mounted
+                 *-volume:2
+                      description: EXT4 volume
+                      vendor: Linux
+                      physical id: 3
+                      bus info: nvme@0:1,3
+                      logical name: /dev/nvme0n1p3
+                      version: 1.0
+                      serial: [REMOVED]
+                      size: 221GiB
+                      capabilities: journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+                      configuration: created=2025-10-16 19:47:07 filesystem=ext4 lastmountpoint=/ modified=2025-10-16 19:53:44 mounted=2025-10-16 19:53:44 state=clean
+        *-isa
+             description: ISA bridge
+             product: Comet Lake PCH-LP LPC Premium Controller/eSPI Controller
+             vendor: Intel Corporation
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0c02
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:01
+                product: PnP device PNP0b00
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=rtc_cmos
+           *-pnp00:02
+                product: PnP device PNP0303
+                physical id: 2
+                capabilities: pnp
+                configuration: driver=i8042 kbd
+           *-pnp00:03
+                product: PnP device DLL09a0
+                vendor: Dell Inc
+                physical id: 3
+                capabilities: pnp
+                configuration: driver=i8042 aux
+           *-pnp00:04
+                product: PnP device PNP0c02
+                physical id: 4
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:05
+                product: PnP device PNP0c02
+                physical id: 5
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:06
+                product: PnP device PNP0c02
+                physical id: 6
+                capabilities: pnp
+                configuration: driver=system
+           *-pnp00:07
+                product: PnP device PNP0c02
+                physical id: 7
+                capabilities: pnp
+                configuration: driver=system
+        *-multimedia
+             description: Audio device
+             product: Comet Lake PCH-LP cAVS
+             vendor: Intel Corporation
+             physical id: 1f.3
+             bus info: pci@0000:00:1f.3
+             logical name: card0
+             logical name: /dev/snd/controlC0
+             logical name: /dev/snd/hwC0D0
+             logical name: /dev/snd/hwC0D2
+             logical name: /dev/snd/pcmC0D0c
+             logical name: /dev/snd/pcmC0D0p
+             logical name: /dev/snd/pcmC0D3p
+             logical name: /dev/snd/pcmC0D7p
+             logical name: /dev/snd/pcmC0D8p
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list
+             configuration: driver=snd_hda_intel latency=32
+             resources: irq:154 memory:91338000-9133bfff memory:91000000-910fffff
+           *-input:0
+                product: HDA Intel PCH Headphone Mic
+                physical id: 0
+                logical name: input16
+                logical name: /dev/input/event12
+           *-input:1
+                product: HDA Intel PCH HDMI/DP,pcm=3
+                physical id: 1
+                logical name: input17
+                logical name: /dev/input/event13
+           *-input:2
+                product: HDA Intel PCH HDMI/DP,pcm=7
+                physical id: 2
+                logical name: input18
+                logical name: /dev/input/event14
+           *-input:3
+                product: HDA Intel PCH HDMI/DP,pcm=8
+                physical id: 3
+                logical name: input19
+                logical name: /dev/input/event15
+        *-serial:3
+             description: SMBus
+             product: Comet Lake PCH-LP SMBus Host Controller
+             vendor: Intel Corporation
+             physical id: 1f.4
+             bus info: pci@0000:00:1f.4
+             version: 00
+             width: 64 bits
+             clock: 33MHz
+             configuration: driver=i801_smbus latency=0
+             resources: irq:16 memory:91344000-913440ff ioport:efa0(size=32)
+        *-serial:4
+             description: Serial bus controller
+             product: Comet Lake SPI (flash) Controller
+             vendor: Intel Corporation
+             physical id: 1f.5
+             bus info: pci@0000:00:1f.5
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             configuration: driver=intel-spi latency=0
+             resources: irq:0 memory:fe010000-fe010fff
+        *-network:1
+             description: Ethernet interface
+             product: Ethernet Connection (10) I219-V
+             vendor: Intel Corporation
+             physical id: 1f.6
+             bus info: pci@0000:00:1f.6
+             logical name: eno2
+             version: 00
+             serial: [REMOVED]
+             capacity: 1Gbit/s
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pm msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=6.14.0-33-generic firmware=0.6-4 latency=0 link=no multicast=yes port=twisted pair
+             resources: irq:142 memory:91300000-9131ffff
+  *-battery
+       product: DELL XV8CJ0B
+       vendor: LG
+       physical id: 1
+       version: 11/09/2020
+       serial: [REMOVED]
+       slot: Sys. Battery Bay
+       capacity: 42000mWh
+       configuration: voltage=11.4V
+  *-input:0
+       product: Lid Switch
+       physical id: 2
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Power Button
+       physical id: 3
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: platform
+  *-input:2
+       product: DELL09A0:00 0488:120A Touchpad
+       physical id: 4
+       logical name: input10
+       logical name: /dev/input/event5
+       logical name: /dev/input/mouse1
+       capabilities: i2c
+  *-input:3
+       product: DELL09A0:00 0488:120A UNKNOWN
+       physical id: 5
+       logical name: input11
+       logical name: /dev/input/event6
+       capabilities: i2c
+  *-input:4
+       product: Intel HID events
+       physical id: 6
+       logical name: input12
+       logical name: /dev/input/event8
+       capabilities: platform
+  *-input:5
+       product: Intel HID 5 button array
+       physical id: 7
+       logical name: input13
+       logical name: /dev/input/event9
+       capabilities: platform
+  *-input:6
+       product: Dell WMI hotkeys
+       physical id: 8
+       logical name: input14
+       logical name: /dev/input/event10
+       capabilities: platform
+  *-input:7
+       product: Video Bus
+       physical id: 9
+       logical name: input15
+       logical name: /dev/input/event11
+       capabilities: platform
+  *-input:8
+       product: Sleep Button
+       physical id: a
+       logical name: input2
+       logical name: /dev/input/event2
+       capabilities: platform
+  *-input:9
+       product: AT Translated Set 2 keyboard
+       physical id: b
+       logical name: input3
+       logical name: /dev/input/event3
+       logical name: input3::capslock
+       logical name: input3::numlock
+       logical name: input3::scrolllock
+       capabilities: i8042
+  *-input:10
+       product: PS/2 Generic Mouse
+       physical id: c
+       logical name: input5
+       logical name: /dev/input/event7
+       logical name: /dev/input/mouse2
+       capabilities: i8042
+  *-input:11
+       product: DELL09A0:00 0488:120A Mouse
+       physical id: d
+       logical name: input9
+       logical name: /dev/input/event4
+       logical name: /dev/input/mouse0
+       capabilities: i2c
+
+
+=== CPU Info ===
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           39 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  8
+On-line CPU(s) list:                     0-7
+Vendor ID:                               GenuineIntel
+BIOS Vendor ID:                          Intel(R) Corporation
+Model name:                              Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz
+BIOS Model name:                         Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz   CPU @ 3.2GHz
+BIOS CPU family:                         205
+CPU family:                              6
+Model:                                   142
+Thread(s) per core:                      2
+Core(s) per socket:                      4
+Socket(s):                               1
+Stepping:                                12
+CPU(s) scaling MHz:                      86%
+CPU max MHz:                             4200.0000
+CPU min MHz:                             400.0000
+BogoMIPS:                                4199.88
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp vnmi md_clear flush_l1d arch_capabilities
+Virtualization:                          VT-x
+L1d cache:                               128 KiB (4 instances)
+L1i cache:                               128 KiB (4 instances)
+L2 cache:                                1 MiB (4 instances)
+L3 cache:                                6 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-7
+Vulnerability Gather data sampling:      Vulnerable
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Mitigation; Aligned branch/return thunks
+Vulnerability Itlb multihit:             KVM: Mitigation: Split huge pages
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS SW sequence; BHI SW loop, KVM SW loop
+Vulnerability Srbds:                     Mitigation; Microcode
+Vulnerability Tsx async abort:           Not affected
+
+
+=== Memory Info ===
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       5.0Gi       4.3Gi       772Mi       6.7Gi        10Gi
+Swap:          4.0Gi       512Ki       4.0Gi
+
+
+=== PCI Devices ===
+00:00.0 Host bridge [0600]: Intel Corporation Comet Lake-U v1 4c Host Bridge/DRAM Controller [8086:9b61] (rev 0c)
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake-U v1 4c Host Bridge/DRAM Controller [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B+ ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	IOMMU group: 0
+	Capabilities: [e0] Vendor Specific Information: Len=10 <?>
+	Kernel driver in use: skl_uncore
+
+00:02.0 VGA compatible controller [0300]: Intel Corporation CometLake-U GT2 [UHD Graphics] [8086:9b41] (rev 02) (prog-if 00 [VGA controller])
+	DeviceName: Onboard - Video
+	Subsystem: Dell CometLake-U GT2 [UHD Graphics] [1028:09a0]
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 153
+	Region 0: Memory at 90000000 (64-bit, non-prefetchable) [size=16M]
+	Region 2: Memory at 80000000 (64-bit, prefetchable) [size=256M]
+	Region 4: I/O ports at 3000 [size=64]
+	Expansion ROM at 000c0000 [virtual] [disabled] [size=128K]
+	Capabilities: [40] Vendor Specific Information: Len=0c <?>
+	Capabilities: [70] Express (v2) Root Complex Integrated Endpoint, MSI 00
+		DevCap:	MaxPayload 128 bytes, PhantFunc 0
+			ExtTag- RBE+ FLReset+
+		DevCtl:	CorrErr- NonFatalErr- FatalErr- UnsupReq-
+			RlxdOrd- ExtTag- PhantFunc- AuxPwr- NoSnoop- FLReset-
+			MaxPayload 128 bytes, MaxReadReq 128 bytes
+		DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend-
+		DevCap2: Completion Timeout: Not Supported, TimeoutDis- NROPrPrP- LTR-
+			 10BitTagComp- 10BitTagReq- OBFF Not Supported, ExtFmt- EETLPPrefix-
+			 EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
+			 FRS-
+			 AtomicOpsCap: 32bit- 64bit- 128bitCAS-
+		DevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR- 10BitTagReq- OBFF Disabled,
+			 AtomicOpsCtl: ReqEn-
+	Capabilities: [ac] MSI: Enable+ Count=1/1 Maskable- 64bit-
+		Address: fee00018  Data: 0000
+	Capabilities: [d0] Power Management version 2
+		Flags: PMEClk- DSI+ D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [100 v1] Process Address Space ID (PASID)
+		PASIDCap: Exec- Priv-, Max PASID Width: 14
+		PASIDCtl: Enable- Exec- Priv-
+	Capabilities: [200 v1] Address Translation Service (ATS)
+		ATSCap:	Invalidate Queue Depth: 00
+		ATSCtl:	Enable-, Smallest Translation Unit: 00
+	Capabilities: [300 v1] Page Request Interface (PRI)
+		PRICtl: Enable- Reset-
+		PRISta: RF- UPRGI- Stopped+
+		Page Request Capacity: 00008000, Page Request Allocation: 00000000
+	Kernel driver in use: i915
+	Kernel modules: i915
+
+00:04.0 Signal processing controller [1180]: Intel Corporation Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem [8086:1903] (rev 0c)
+	DeviceName: Onboard - Other
+	Subsystem: Dell Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem [1028:09a0]
+	Control: I/O- Mem+ BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B+ ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Interrupt: pin A routed to IRQ 16
+	IOMMU group: 1
+	Region 0: Memory at 91330000 (64-bit, non-prefetchable) [size=32K]
+	Capabilities: [90] MSI: Enable- Count=1/1 Maskable- 64bit-
+		Address: 00000000  Data: 0000
+	Capabilities: [d0] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [e0] Vendor Specific Information: Len=0c <?>
+	Kernel driver in use: proc_thermal
+	Kernel modules: processor_thermal_device_pci_legacy
+
+00:08.0 System peripheral [0880]: Intel Corporation Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model [8086:1911]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model [1028:09a0]
+	Control: I/O- Mem- BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Interrupt: pin A routed to IRQ 255
+	IOMMU group: 2
+	Region 0: Memory at 9134d000 (64-bit, non-prefetchable) [disabled] [size=4K]
+	Capabilities: [90] MSI: Enable- Count=1/1 Maskable- 64bit-
+		Address: 00000000  Data: 0000
+	Capabilities: [dc] Power Management version 2
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [f0] PCI Advanced Features
+		AFCap: TP+ FLR+
+		AFCtrl: FLR-
+		AFStatus: TP-
+
+00:12.0 Signal processing controller [1180]: Intel Corporation Comet Lake Thermal Subsytem [8086:02f9]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake Thermal Subsytem [1028:09a0]
+	Control: I/O- Mem+ BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Interrupt: pin A routed to IRQ 16
+	IOMMU group: 3
+	Region 0: Memory at 9134c000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [50] Power Management version 3
+		Flags: PMEClk- DSI+ D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [80] MSI: Enable- Count=1/1 Maskable- 64bit-
+		Address: 00000000  Data: 0000
+	Kernel driver in use: intel_pch_thermal
+	Kernel modules: intel_pch_thermal
+
+00:14.0 USB controller [0c03]: Intel Corporation Comet Lake PCH-LP USB 3.1 xHCI Host Controller [8086:02ed] (prog-if 30 [XHCI])
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake PCH-LP USB 3.1 xHCI Host Controller [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 123
+	IOMMU group: 4
+	Region 0: Memory at 91320000 (64-bit, non-prefetchable) [size=64K]
+	Capabilities: [70] Power Management version 2
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=375mA PME(D0-,D1-,D2-,D3hot+,D3cold+)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [80] MSI: Enable+ Count=8/8 Maskable- 64bit+
+		Address: 00000000fee00318  Data: 0000
+	Capabilities: [90] Vendor Specific Information: Len=14 <?>
+	Kernel driver in use: xhci_hcd
+
+00:14.2 RAM memory [0500]: Intel Corporation Comet Lake PCH-LP Shared SRAM [8086:02ef]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake PCH-LP Shared SRAM [1028:09a0]
+	Control: I/O- Mem- BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	IOMMU group: 4
+	Region 0: Memory at 91342000 (64-bit, non-prefetchable) [disabled] [size=8K]
+	Region 2: Memory at 9134b000 (64-bit, non-prefetchable) [disabled] [size=4K]
+	Capabilities: [80] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+
+00:14.3 Network controller [0280]: Intel Corporation Comet Lake PCH-LP CNVi WiFi [8086:02f0]
+	DeviceName: Onboard - Ethernet
+	Subsystem: Intel Corporation Dual Band Wi-Fi 6(802.11ax) AX201 160MHz 2x2 [Harrison Peak] [8086:4070]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 16
+	IOMMU group: 5
+	Region 0: Memory at 9133c000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: [c8] Power Management version 3
+		Flags: PMEClk- DSI+ D1- D2- AuxCurrent=0mA PME(D0+,D1-,D2-,D3hot+,D3cold+)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [d0] MSI: Enable- Count=1/1 Maskable- 64bit+
+		Address: 0000000000000000  Data: 0000
+	Capabilities: [40] Express (v2) Root Complex Integrated Endpoint, MSI 00
+		DevCap:	MaxPayload 128 bytes, PhantFunc 0
+			ExtTag- RBE- FLReset+
+		DevCtl:	CorrErr- NonFatalErr- FatalErr- UnsupReq-
+			RlxdOrd+ ExtTag- PhantFunc- AuxPwr+ NoSnoop+ FLReset-
+			MaxPayload 128 bytes, MaxReadReq 128 bytes
+		DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr+ TransPend-
+		DevCap2: Completion Timeout: Range B, TimeoutDis+ NROPrPrP- LTR+
+			 10BitTagComp- 10BitTagReq- OBFF Via WAKE#, ExtFmt- EETLPPrefix-
+			 EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
+			 FRS-
+			 AtomicOpsCap: 32bit- 64bit- 128bitCAS-
+		DevCtl2: Completion Timeout: 16ms to 55ms, TimeoutDis- LTR+ 10BitTagReq- OBFF Disabled,
+			 AtomicOpsCtl: ReqEn-
+	Capabilities: [80] MSI-X: Enable+ Count=16 Masked-
+		Vector table: BAR=0 offset=00002000
+		PBA: BAR=0 offset=00003000
+	Capabilities: [100 v1] Latency Tolerance Reporting
+		Max snoop latency: 0ns
+		Max no snoop latency: 0ns
+	Capabilities: [164 v1] Vendor Specific Information: ID=0010 Rev=0 Len=014 <?>
+	Kernel driver in use: iwlwifi
+	Kernel modules: iwlwifi
+
+00:15.0 Serial bus controller [0c80]: Intel Corporation Serial IO I2C Host Controller [8086:02e8]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Serial IO I2C Host Controller [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 16
+	IOMMU group: 6
+	Region 0: Memory at 7e800000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [80] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D3 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [90] Vendor Specific Information: Len=14 <?>
+	Kernel driver in use: intel-lpss
+	Kernel modules: intel_lpss_pci
+
+00:15.1 Serial bus controller [0c80]: Intel Corporation Comet Lake Serial IO I2C Host Controller [8086:02e9]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake Serial IO I2C Host Controller [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx+
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin B routed to IRQ 17
+	IOMMU group: 6
+	Region 0: Memory at 7e801000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [80] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [90] Vendor Specific Information: Len=14 <?>
+	Kernel driver in use: intel-lpss
+	Kernel modules: intel_lpss_pci
+
+00:16.0 Communication controller [0780]: Intel Corporation Comet Lake Management Engine Interface [8086:02e0]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake Management Engine Interface [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 133
+	IOMMU group: 7
+	Region 0: Memory at 91348000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [50] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot+,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [8c] MSI: Enable+ Count=1/1 Maskable- 64bit+
+		Address: 00000000fee002d8  Data: 0000
+	Capabilities: [a4] Vendor Specific Information: Len=14 <?>
+	Kernel driver in use: mei_me
+	Kernel modules: mei_me
+
+00:17.0 SATA controller [0106]: Intel Corporation Comet Lake SATA AHCI Controller [8086:02d3] (prog-if 01 [AHCI 1.0])
+	DeviceName: Onboard - SATA
+	Subsystem: Dell Comet Lake SATA AHCI Controller [1028:09a0]
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz+ UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 132
+	IOMMU group: 8
+	Region 0: Memory at 91340000 (32-bit, non-prefetchable) [size=8K]
+	Region 1: Memory at 91347000 (32-bit, non-prefetchable) [size=256]
+	Region 2: I/O ports at 3090 [size=8]
+	Region 3: I/O ports at 3080 [size=4]
+	Region 4: I/O ports at 3060 [size=32]
+	Region 5: Memory at 91346000 (32-bit, non-prefetchable) [size=2K]
+	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
+		Address: fee002b8  Data: 0000
+	Capabilities: [70] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot+,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [a8] SATA HBA v1.0 BAR4 Offset=00000004
+	Kernel driver in use: ahci
+	Kernel modules: ahci
+
+00:19.0 Serial bus controller [0c80]: Intel Corporation Comet Lake Serial IO I2C Host Controller [8086:02c5]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake Serial IO I2C Host Controller [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 32
+	IOMMU group: 9
+	Region 0: Memory at 7e802000 (64-bit, non-prefetchable) [size=4K]
+	Capabilities: [80] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D3 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [90] Vendor Specific Information: Len=14 <?>
+	Kernel driver in use: intel-lpss
+	Kernel modules: intel_lpss_pci
+
+00:1c.0 PCI bridge [0604]: Intel Corporation Comet Lake PCI Express Root Port #8 [8086:02bf] (rev f0) (prog-if 00 [Normal decode])
+	Subsystem: Dell Comet Lake PCI Express Root Port [1028:09a0]
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin D routed to IRQ 121
+	IOMMU group: 10
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	I/O behind bridge: [disabled] [16-bit]
+	Memory behind bridge: 91200000-912fffff [size=1M] [32-bit]
+	Prefetchable memory behind bridge: [disabled] [64-bit]
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR+ NoISA- VGA- VGA16+ MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: [40] Express (v2) Root Port (Slot+), MSI 00
+		DevCap:	MaxPayload 256 bytes, PhantFunc 0
+			ExtTag- RBE+
+		DevCtl:	CorrErr+ NonFatalErr+ FatalErr+ UnsupReq+
+			RlxdOrd- ExtTag- PhantFunc- AuxPwr- NoSnoop-
+			MaxPayload 256 bytes, MaxReadReq 128 bytes
+		DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr+ TransPend-
+		LnkCap:	Port #8, Speed 8GT/s, Width x1, ASPM L0s L1, Exit Latency L0s <1us, L1 <16us
+			ClockPM- Surprise- LLActRep+ BwNot+ ASPMOptComp+
+		LnkCtl:	ASPM L0s L1 Enabled; RCB 64 bytes, Disabled- CommClk+
+			ExtSynch- ClockPM- AutWidDis- BWInt+ AutBWInt+
+		LnkSta:	Speed 5GT/s, Width x1
+			TrErr- Train- SlotClk+ DLActive+ BWMgmt- ABWMgmt-
+		SltCap:	AttnBtn- PwrCtrl- MRL- AttnInd- PwrInd- HotPlug- Surprise-
+			Slot #11, PowerLimit 10W; Interlock- NoCompl+
+		SltCtl:	Enable: AttnBtn- PwrFlt- MRL- PresDet- CmdCplt- HPIrq- LinkChg-
+			Control: AttnInd Unknown, PwrInd Unknown, Power- Interlock-
+		SltSta:	Status: AttnBtn- PowerFlt- MRL- CmdCplt- PresDet+ Interlock-
+			Changed: MRL- PresDet- LinkState-
+		RootCap: CRSVisible-
+		RootCtl: ErrCorrectable- ErrNon-Fatal- ErrFatal- PMEIntEna+ CRSVisible-
+		RootSta: PME ReqID 0000, PMEStatus- PMEPending-
+		DevCap2: Completion Timeout: Range ABC, TimeoutDis+ NROPrPrP- LTR+
+			 10BitTagComp- 10BitTagReq- OBFF Not Supported, ExtFmt- EETLPPrefix-
+			 EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
+			 FRS- LN System CLS Not Supported, TPHComp- ExtTPHComp- ARIFwd+
+			 AtomicOpsCap: Routing- 32bit- 64bit- 128bitCAS-
+		DevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR+ 10BitTagReq- OBFF Disabled, ARIFwd-
+			 AtomicOpsCtl: ReqEn- EgressBlck-
+		LnkCap2: Supported Link Speeds: 2.5-8GT/s, Crosslink- Retimer- 2Retimers- DRS-
+		LnkCtl2: Target Link Speed: 8GT/s, EnterCompliance- SpeedDis-
+			 Transmit Margin: Normal Operating Range, EnterModifiedCompliance- ComplianceSOS-
+			 Compliance Preset/De-emphasis: -6dB de-emphasis, 0dB preshoot
+		LnkSta2: Current De-emphasis Level: -6dB, EqualizationComplete- EqualizationPhase1-
+			 EqualizationPhase2- EqualizationPhase3- LinkEqualizationRequest-
+			 Retimer- 2Retimers- CrosslinkRes: unsupported
+	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
+		Address: fee00238  Data: 0000
+	Capabilities: [90] Subsystem: Dell Comet Lake PCI Express Root Port [1028:09a0]
+	Capabilities: [a0] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0+,D1-,D2-,D3hot+,D3cold+)
+		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [100 v1] Advanced Error Reporting
+		UESta:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UEMsk:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt+ RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UESvrt:	DLP+ SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-
+		CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr-
+		CEMsk:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr+
+		AERCap:	First Error Pointer: 00, ECRCGenCap- ECRCGenEn- ECRCChkCap- ECRCChkEn-
+			MultHdrRecCap- MultHdrRecEn- TLPPfxPres- HdrLogCap-
+		HeaderLog: 00000000 00000000 00000000 00000000
+		RootCmd: CERptEn+ NFERptEn+ FERptEn+
+		RootSta: CERcvd- MultCERcvd- UERcvd- MultUERcvd-
+			 FirstFatal- NonFatalMsg- FatalMsg- IntMsg 0
+		ErrorSrc: ERR_COR: 0000 ERR_FATAL/NONFATAL: 0000
+	Capabilities: [140 v1] Access Control Services
+		ACSCap:	SrcValid+ TransBlk+ ReqRedir+ CmpltRedir+ UpstreamFwd- EgressCtrl- DirectTrans-
+		ACSCtl:	SrcValid+ TransBlk- ReqRedir+ CmpltRedir+ UpstreamFwd- EgressCtrl- DirectTrans-
+	Capabilities: [150 v1] Precision Time Measurement
+		PTMCap: Requester:- Responder:+ Root:+
+		PTMClockGranularity: 4ns
+		PTMControl: Enabled:+ RootSelected:+
+		PTMEffectiveGranularity: Unknown
+	Capabilities: [200 v1] L1 PM Substates
+		L1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+ L1_PM_Substates+
+			  PortCommonModeRestoreTime=40us PortTPowerOnTime=44us
+		L1SubCtl1: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+
+			   T_CommonMode=60us LTR1.2_Threshold=126976ns
+		L1SubCtl2: T_PwrOn=60us
+	Capabilities: [220 v1] Secondary PCI Express
+		LnkCtl3: LnkEquIntrruptEn- PerformEqu-
+		LaneErrStat: 0
+	Capabilities: [250 v1] Downstream Port Containment
+		DpcCap:	INT Msg #0, RPExt+ PoisonedTLP+ SwTrigger+ RP PIO Log 4, DL_ActiveErr+
+		DpcCtl:	Trigger:1 Cmpl- INT+ ErrCor- PoisonedTLP- SwTrigger- DL_ActiveErr-
+		DpcSta:	Trigger- Reason:00 INT- RPBusy- TriggerExt:00 RP PIO ErrPtr:1f
+		Source:	0000
+	Kernel driver in use: pcieport
+
+00:1d.0 PCI bridge [0604]: Intel Corporation Comet Lake PCI Express Root Port #13 [8086:02b4] (rev f0) (prog-if 00 [Normal decode])
+	Subsystem: Dell Comet Lake PCI Express Root Port [1028:09a0]
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 122
+	IOMMU group: 11
+	Bus: primary=00, secondary=02, subordinate=02, sec-latency=0
+	I/O behind bridge: [disabled] [16-bit]
+	Memory behind bridge: 91100000-911fffff [size=1M] [32-bit]
+	Prefetchable memory behind bridge: [disabled] [64-bit]
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR+ NoISA- VGA- VGA16+ MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: [40] Express (v2) Root Port (Slot+), MSI 00
+		DevCap:	MaxPayload 256 bytes, PhantFunc 0
+			ExtTag- RBE+
+		DevCtl:	CorrErr+ NonFatalErr+ FatalErr+ UnsupReq+
+			RlxdOrd- ExtTag- PhantFunc- AuxPwr- NoSnoop-
+			MaxPayload 256 bytes, MaxReadReq 128 bytes
+		DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr+ TransPend-
+		LnkCap:	Port #13, Speed 8GT/s, Width x4, ASPM L0s L1, Exit Latency L0s <1us, L1 <16us
+			ClockPM- Surprise- LLActRep+ BwNot+ ASPMOptComp+
+		LnkCtl:	ASPM L1 Enabled; RCB 64 bytes, Disabled- CommClk+
+			ExtSynch- ClockPM- AutWidDis- BWInt+ AutBWInt+
+		LnkSta:	Speed 8GT/s, Width x4
+			TrErr- Train- SlotClk+ DLActive+ BWMgmt- ABWMgmt-
+		SltCap:	AttnBtn- PwrCtrl- MRL- AttnInd- PwrInd- HotPlug- Surprise-
+			Slot #16, PowerLimit 25W; Interlock- NoCompl+
+		SltCtl:	Enable: AttnBtn- PwrFlt- MRL- PresDet- CmdCplt- HPIrq- LinkChg-
+			Control: AttnInd Unknown, PwrInd Unknown, Power- Interlock-
+		SltSta:	Status: AttnBtn- PowerFlt- MRL- CmdCplt- PresDet+ Interlock-
+			Changed: MRL- PresDet- LinkState-
+		RootCap: CRSVisible-
+		RootCtl: ErrCorrectable- ErrNon-Fatal- ErrFatal- PMEIntEna+ CRSVisible-
+		RootSta: PME ReqID 0000, PMEStatus- PMEPending-
+		DevCap2: Completion Timeout: Range ABC, TimeoutDis+ NROPrPrP- LTR+
+			 10BitTagComp- 10BitTagReq- OBFF Not Supported, ExtFmt- EETLPPrefix-
+			 EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
+			 FRS- LN System CLS Not Supported, TPHComp- ExtTPHComp- ARIFwd+
+			 AtomicOpsCap: Routing- 32bit- 64bit- 128bitCAS-
+		DevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR+ 10BitTagReq- OBFF Disabled, ARIFwd-
+			 AtomicOpsCtl: ReqEn- EgressBlck-
+		LnkCap2: Supported Link Speeds: 2.5-8GT/s, Crosslink- Retimer- 2Retimers- DRS-
+		LnkCtl2: Target Link Speed: 8GT/s, EnterCompliance- SpeedDis-
+			 Transmit Margin: Normal Operating Range, EnterModifiedCompliance- ComplianceSOS-
+			 Compliance Preset/De-emphasis: -6dB de-emphasis, 0dB preshoot
+		LnkSta2: Current De-emphasis Level: -3.5dB, EqualizationComplete+ EqualizationPhase1+
+			 EqualizationPhase2+ EqualizationPhase3+ LinkEqualizationRequest-
+			 Retimer- 2Retimers- CrosslinkRes: unsupported
+	Capabilities: [80] MSI: Enable+ Count=1/1 Maskable- 64bit-
+		Address: fee00278  Data: 0000
+	Capabilities: [90] Subsystem: Dell Comet Lake PCI Express Root Port [1028:09a0]
+	Capabilities: [a0] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0+,D1-,D2-,D3hot+,D3cold+)
+		Status: D0 NoSoftRst- PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [100 v1] Advanced Error Reporting
+		UESta:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UEMsk:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt+ RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UESvrt:	DLP+ SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-
+		CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr-
+		CEMsk:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr+
+		AERCap:	First Error Pointer: 00, ECRCGenCap- ECRCGenEn- ECRCChkCap- ECRCChkEn-
+			MultHdrRecCap- MultHdrRecEn- TLPPfxPres- HdrLogCap-
+		HeaderLog: 00000000 00000000 00000000 00000000
+		RootCmd: CERptEn+ NFERptEn+ FERptEn+
+		RootSta: CERcvd- MultCERcvd- UERcvd- MultUERcvd-
+			 FirstFatal- NonFatalMsg- FatalMsg- IntMsg 0
+		ErrorSrc: ERR_COR: 0000 ERR_FATAL/NONFATAL: 0000
+	Capabilities: [140 v1] Access Control Services
+		ACSCap:	SrcValid+ TransBlk+ ReqRedir+ CmpltRedir+ UpstreamFwd- EgressCtrl- DirectTrans-
+		ACSCtl:	SrcValid+ TransBlk- ReqRedir+ CmpltRedir+ UpstreamFwd- EgressCtrl- DirectTrans-
+	Capabilities: [150 v1] Precision Time Measurement
+		PTMCap: Requester:- Responder:+ Root:+
+		PTMClockGranularity: 4ns
+		PTMControl: Enabled:+ RootSelected:+
+		PTMEffectiveGranularity: Unknown
+	Capabilities: [200 v1] L1 PM Substates
+		L1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+ L1_PM_Substates+
+			  PortCommonModeRestoreTime=40us PortTPowerOnTime=44us
+		L1SubCtl1: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+
+			   T_CommonMode=40us LTR1.2_Threshold=90112ns
+		L1SubCtl2: T_PwrOn=44us
+	Capabilities: [220 v1] Secondary PCI Express
+		LnkCtl3: LnkEquIntrruptEn- PerformEqu-
+		LaneErrStat: 0
+	Capabilities: [250 v1] Downstream Port Containment
+		DpcCap:	INT Msg #0, RPExt+ PoisonedTLP+ SwTrigger+ RP PIO Log 4, DL_ActiveErr+
+		DpcCtl:	Trigger:1 Cmpl- INT+ ErrCor- PoisonedTLP- SwTrigger- DL_ActiveErr-
+		DpcSta:	Trigger- Reason:00 INT- RPBusy- TriggerExt:00 RP PIO ErrPtr:1f
+		Source:	0000
+	Kernel driver in use: pcieport
+
+00:1f.0 ISA bridge [0601]: Intel Corporation Comet Lake PCH-LP LPC Premium Controller/eSPI Controller [8086:0284]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake PCH-LP LPC Premium Controller/eSPI Controller [1028:09a0]
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap- 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	IOMMU group: 12
+
+00:1f.3 Audio device [0403]: Intel Corporation Comet Lake PCH-LP cAVS [8086:02c8] (prog-if 80)
+	DeviceName: Onboard - Sound
+	Subsystem: Dell Comet Lake PCH-LP cAVS [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 32, Cache Line Size: 64 bytes
+	Interrupt: pin B routed to IRQ 154
+	IOMMU group: 12
+	Region 0: Memory at 91338000 (64-bit, non-prefetchable) [size=16K]
+	Region 4: Memory at 91000000 (64-bit, non-prefetchable) [size=1M]
+	Capabilities: [50] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=55mA PME(D0-,D1-,D2-,D3hot+,D3cold+)
+		Status: D3 NoSoftRst+ PME-Enable+ DSel=0 DScale=0 PME-
+	Capabilities: [80] Vendor Specific Information: Len=14 <?>
+	Capabilities: [60] MSI: Enable+ Count=1/1 Maskable- 64bit+
+		Address: 00000000fee006b8  Data: 0000
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel, snd_soc_avs, snd_sof_pci_intel_cnl
+
+00:1f.4 SMBus [0c05]: Intel Corporation Comet Lake PCH-LP SMBus Host Controller [8086:02a3]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake PCH-LP SMBus Host Controller [1028:09a0]
+	Control: I/O+ Mem+ BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap- 66MHz- UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Interrupt: pin A routed to IRQ 16
+	IOMMU group: 12
+	Region 0: Memory at 91344000 (64-bit, non-prefetchable) [size=256]
+	Region 4: I/O ports at efa0 [size=32]
+	Kernel driver in use: i801_smbus
+	Kernel modules: i2c_i801
+
+00:1f.5 Serial bus controller [0c80]: Intel Corporation Comet Lake SPI (flash) Controller [8086:02a4]
+	DeviceName: Onboard - Other
+	Subsystem: Dell Comet Lake SPI (flash) Controller [1028:09a0]
+	Control: I/O- Mem+ BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap- 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	IOMMU group: 12
+	Region 0: Memory at fe010000 (32-bit, non-prefetchable) [size=4K]
+	Kernel driver in use: intel-spi
+	Kernel modules: spi_intel_pci
+
+00:1f.6 Ethernet controller [0200]: Intel Corporation Ethernet Connection (10) I219-V [8086:0d4f]
+	DeviceName: Onboard - Ethernet
+	Subsystem: Dell Ethernet Connection (10) I219-V [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 142
+	IOMMU group: 12
+	Region 0: Memory at 91300000 (32-bit, non-prefetchable) [size=128K]
+	Capabilities: [c8] Power Management version 3
+		Flags: PMEClk- DSI+ D1- D2- AuxCurrent=0mA PME(D0+,D1-,D2-,D3hot+,D3cold+)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=1 PME-
+	Capabilities: [d0] MSI: Enable+ Count=1/1 Maskable- 64bit+
+		Address: 00000000fee00558  Data: 0000
+	Kernel driver in use: e1000e
+	Kernel modules: e1000e
+
+01:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTS525A PCI Express Card Reader [10ec:525a] (rev 01)
+	Subsystem: Dell RTS525A PCI Express Card Reader [1028:09a0]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 131
+	IOMMU group: 13
+	Region 1: Memory at 91200000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: [80] Power Management version 3
+		Flags: PMEClk- DSI- D1+ D2+ AuxCurrent=375mA PME(D0-,D1+,D2+,D3hot+,D3cold+)
+		Status: D3 NoSoftRst- PME-Enable+ DSel=0 DScale=0 PME-
+	Capabilities: [90] MSI: Enable+ Count=1/1 Maskable- 64bit+
+		Address: 00000000fee00298  Data: 0000
+	Capabilities: [b0] Express (v2) Endpoint, MSI 00
+		DevCap:	MaxPayload 512 bytes, PhantFunc 0, Latency L0s unlimited, L1 unlimited
+			ExtTag- AttnBtn- AttnInd- PwrInd- RBE+ FLReset- SlotPowerLimit 10W
+		DevCtl:	CorrErr+ NonFatalErr+ FatalErr+ UnsupReq+
+			RlxdOrd+ ExtTag- PhantFunc- AuxPwr- NoSnoop-
+			MaxPayload 256 bytes, MaxReadReq 512 bytes
+		DevSta:	CorrErr+ NonFatalErr- FatalErr- UnsupReq+ AuxPwr+ TransPend-
+		LnkCap:	Port #0, Speed 5GT/s, Width x1, ASPM L0s L1, Exit Latency L0s unlimited, L1 <64us
+			ClockPM+ Surprise- LLActRep- BwNot- ASPMOptComp+
+		LnkCtl:	ASPM L0s L1 Enabled; RCB 64 bytes, Disabled- CommClk+
+			ExtSynch- ClockPM+ AutWidDis- BWInt- AutBWInt-
+		LnkSta:	Speed 5GT/s, Width x1
+			TrErr- Train- SlotClk+ DLActive- BWMgmt- ABWMgmt-
+		DevCap2: Completion Timeout: Not Supported, TimeoutDis+ NROPrPrP- LTR+
+			 10BitTagComp- 10BitTagReq- OBFF Via message/WAKE#, ExtFmt- EETLPPrefix-
+			 EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
+			 FRS- TPHComp- ExtTPHComp-
+			 AtomicOpsCap: 32bit- 64bit- 128bitCAS-
+		DevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR+ 10BitTagReq- OBFF Disabled,
+			 AtomicOpsCtl: ReqEn-
+		LnkCap2: Supported Link Speeds: 2.5-5GT/s, Crosslink- Retimer- 2Retimers- DRS-
+		LnkCtl2: Target Link Speed: 5GT/s, EnterCompliance- SpeedDis-
+			 Transmit Margin: Normal Operating Range, EnterModifiedCompliance- ComplianceSOS-
+			 Compliance Preset/De-emphasis: -6dB de-emphasis, 0dB preshoot
+		LnkSta2: Current De-emphasis Level: -6dB, EqualizationComplete- EqualizationPhase1-
+			 EqualizationPhase2- EqualizationPhase3- LinkEqualizationRequest-
+			 Retimer- 2Retimers- CrosslinkRes: unsupported
+	Capabilities: [100 v2] Advanced Error Reporting
+		UESta:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UEMsk:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UESvrt:	DLP+ SDES+ TLP- FCP+ CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-
+		CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr-
+		CEMsk:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr+
+		AERCap:	First Error Pointer: 00, ECRCGenCap+ ECRCGenEn- ECRCChkCap+ ECRCChkEn-
+			MultHdrRecCap- MultHdrRecEn- TLPPfxPres- HdrLogCap-
+		HeaderLog: 00000000 00000000 00000000 00000000
+	Capabilities: [148 v1] Device Serial Number 00-00-00-01-00-4c-e0-00
+	Capabilities: [158 v1] Latency Tolerance Reporting
+		Max snoop latency: 3145728ns
+		Max no snoop latency: 3145728ns
+	Capabilities: [160 v1] L1 PM Substates
+		L1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+ L1_PM_Substates+
+			  PortCommonModeRestoreTime=60us PortTPowerOnTime=60us
+		L1SubCtl1: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+
+			   T_CommonMode=0us LTR1.2_Threshold=126976ns
+		L1SubCtl2: T_PwrOn=60us
+	Kernel driver in use: rtsx_pci
+	Kernel modules: rtsx_pci
+
+02:00.0 Non-Volatile memory controller [0108]: Samsung Electronics Co Ltd NVMe SSD Controller SM961/PM961/SM963 [144d:a804] (prog-if 02 [NVM Express])
+	Subsystem: Samsung Electronics Co Ltd SM963 2.5" NVMe PCIe SSD [144d:a801]
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 16
+	IOMMU group: 14
+	Region 0: Memory at 91100000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: [40] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Capabilities: [50] MSI: Enable- Count=1/32 Maskable- 64bit+
+		Address: 0000000000000000  Data: 0000
+	Capabilities: [70] Express (v2) Endpoint, MSI 00
+		DevCap:	MaxPayload 256 bytes, PhantFunc 0, Latency L0s unlimited, L1 unlimited
+			ExtTag- AttnBtn- AttnInd- PwrInd- RBE+ FLReset+ SlotPowerLimit 25W
+		DevCtl:	CorrErr+ NonFatalErr+ FatalErr+ UnsupReq+
+			RlxdOrd+ ExtTag- PhantFunc- AuxPwr- NoSnoop+ FLReset-
+			MaxPayload 256 bytes, MaxReadReq 512 bytes
+		DevSta:	CorrErr+ NonFatalErr- FatalErr- UnsupReq+ AuxPwr+ TransPend-
+		LnkCap:	Port #0, Speed 8GT/s, Width x4, ASPM L1, Exit Latency L1 <64us
+			ClockPM+ Surprise- LLActRep- BwNot- ASPMOptComp+
+		LnkCtl:	ASPM L1 Enabled; RCB 64 bytes, Disabled- CommClk+
+			ExtSynch- ClockPM+ AutWidDis- BWInt- AutBWInt-
+		LnkSta:	Speed 8GT/s, Width x4
+			TrErr- Train- SlotClk+ DLActive- BWMgmt- ABWMgmt-
+		DevCap2: Completion Timeout: Range ABCD, TimeoutDis+ NROPrPrP- LTR+
+			 10BitTagComp- 10BitTagReq- OBFF Not Supported, ExtFmt- EETLPPrefix-
+			 EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
+			 FRS- TPHComp- ExtTPHComp-
+			 AtomicOpsCap: 32bit- 64bit- 128bitCAS-
+		DevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR+ 10BitTagReq- OBFF Disabled,
+			 AtomicOpsCtl: ReqEn-
+		LnkCap2: Supported Link Speeds: 2.5-8GT/s, Crosslink- Retimer- 2Retimers- DRS-
+		LnkCtl2: Target Link Speed: 8GT/s, EnterCompliance- SpeedDis-
+			 Transmit Margin: Normal Operating Range, EnterModifiedCompliance- ComplianceSOS-
+			 Compliance Preset/De-emphasis: -6dB de-emphasis, 0dB preshoot
+		LnkSta2: Current De-emphasis Level: -6dB, EqualizationComplete+ EqualizationPhase1+
+			 EqualizationPhase2+ EqualizationPhase3+ LinkEqualizationRequest-
+			 Retimer- 2Retimers- CrosslinkRes: unsupported
+	Capabilities: [b0] MSI-X: Enable+ Count=8 Masked-
+		Vector table: BAR=0 offset=00003000
+		PBA: BAR=0 offset=00002000
+	Capabilities: [100 v2] Advanced Error Reporting
+		UESta:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UEMsk:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
+		UESvrt:	DLP+ SDES+ TLP- FCP+ CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-
+		CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr-
+		CEMsk:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr+
+		AERCap:	First Error Pointer: 00, ECRCGenCap+ ECRCGenEn- ECRCChkCap+ ECRCChkEn-
+			MultHdrRecCap- MultHdrRecEn- TLPPfxPres- HdrLogCap-
+		HeaderLog: 00000000 00000000 00000000 00000000
+	Capabilities: [148 v1] Device Serial Number 00-00-00-00-00-00-00-00
+	Capabilities: [158 v1] Power Budgeting <?>
+	Capabilities: [168 v1] Secondary PCI Express
+		LnkCtl3: LnkEquIntrruptEn- PerformEqu-
+		LaneErrStat: 0
+	Capabilities: [188 v1] Latency Tolerance Reporting
+		Max snoop latency: 3145728ns
+		Max no snoop latency: 3145728ns
+	Capabilities: [190 v1] L1 PM Substates
+		L1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+ L1_PM_Substates+
+			  PortCommonModeRestoreTime=10us PortTPowerOnTime=10us
+		L1SubCtl1: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+
+			   T_CommonMode=0us LTR1.2_Threshold=90112ns
+		L1SubCtl2: T_PwrOn=44us
+	Kernel driver in use: nvme
+	Kernel modules: nvme
+
+
+
+=== USB Devices ===
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+  idVendor           0x1d6b Linux Foundation
+  idProduct          0x0002 2.0 root hub
+  iProduct                2 xHCI Host Controller
+      bInterfaceClass         9 Hub
+Bus 001 Device 002: ID 0bda:5539 Realtek Semiconductor Corp. Integrated_Webcam_HD
+  idVendor           0x0bda Realtek Semiconductor Corp.
+  idProduct          0x5539 Integrated_Webcam_HD
+  iProduct                1 Integrated_Webcam_HD
+      (Bus Powered)
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+      bInterfaceClass        14 Video
+  (Bus Powered)
+Bus 001 Device 003: ID 8087:0026 Intel Corp. AX201 Bluetooth
+  idVendor           0x8087 Intel Corp.
+  idProduct          0x0026 AX201 Bluetooth
+  iProduct                0 
+      bInterfaceClass       224 Wireless
+      bInterfaceClass       224 Wireless
+      bInterfaceClass       224 Wireless
+      bInterfaceClass       224 Wireless
+      bInterfaceClass       224 Wireless
+      bInterfaceClass       224 Wireless
+      bInterfaceClass       224 Wireless
+      bInterfaceClass       224 Wireless
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+  idVendor           0x1d6b Linux Foundation
+  idProduct          0x0003 3.0 root hub
+  iProduct                2 xHCI Host Controller
+      bInterfaceClass         9 Hub
+
+
+=== Block Devices ===
+NAME          SIZE MODEL                      SERIAL         TYPE MOUNTPOINT
+loop0           4K                                           loop /snap/bare/5
+loop1        73.9M                                           loop /snap/core22/2045
+loop2        13.4M                                           loop /snap/canonical-livepatch/364
+loop3       245.1M                                           loop /snap/firefox/6565
+loop4        73.9M                                           loop /snap/core22/2133
+loop5       248.8M                                           loop /snap/firefox/7024
+loop6        11.1M                                           loop /snap/firmware-updater/167
+loop7        18.5M                                           loop /snap/firmware-updater/210
+loop8         516M                                           loop /snap/gnome-42-2204/202
+loop9       516.2M                                           loop /snap/gnome-42-2204/226
+loop10       10.8M                                           loop /snap/snap-store/1270
+loop11       49.3M                                           loop /snap/snapd/24792
+loop12       91.7M                                           loop /snap/gtk-common-themes/1535
+loop13       50.8M                                           loop /snap/snapd/25202
+loop14        576K                                           loop /snap/snapd-desktop-integration/315
+loop15        210M                                           loop /snap/thunderbird/769
+loop16      226.2M                                           loop /snap/thunderbird/825
+loop17       63.8M                                           loop /snap/core20/2669
+loop18      330.2M                                           loop /snap/code/211
+loop19       55.5M                                           loop /snap/core18/2952
+loop20      294.7M                                           loop /snap/gpt-desktop/1
+loop21      164.8M                                           loop /snap/gnome-3-28-1804/198
+nvme0n1     476.9G SAMSUNG MZVKW512HMJP-000H1 S34CNX0K307615 disk 
+├─nvme0n1p1     1G                                           part /boot/efi
+├─nvme0n1p2 254.1G                                           part /
+└─nvme0n1p3 221.7G                                           part 
+
+
+=== Disks (smartctl) ===
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.14.0-33-generic] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Number:                       SAMSUNG MZVKW512HMJP-000H1
+Serial Number:                      S34CNX0K307615
+Firmware Version:                   CXA74H0Q
+PCI Vendor/Subsystem ID:            0x144d
+IEEE OUI Identifier:                0x002538
+Total NVM Capacity:                 512,110,190,592 [512 GB]
+Unallocated NVM Capacity:           0
+Controller ID:                      2
+NVMe Version:                       1.2
+Number of Namespaces:               1
+Namespace 1 Size/Capacity:          512,110,190,592 [512 GB]
+Namespace 1 Utilization:            117,563,678,720 [117 GB]
+Namespace 1 Formatted LBA Size:     512
+Namespace 1 IEEE EUI-64:            002538 c381b03cfa
+Local Time is:                      Fri Oct 17 19:25:35 2025 PDT
+Firmware Updates (0x16):            3 Slots, no Reset required
+Optional Admin Commands (0x0017):   Security Format Frmw_DL Self_Test
+Optional NVM Commands (0x001f):     Comp Wr_Unc DS_Mngmt Wr_Zero Sav/Sel_Feat
+Log Page Attributes (0x03):         S/H_per_NS Cmd_Eff_Lg
+Warning  Comp. Temp. Threshold:     70 Celsius
+Critical Comp. Temp. Threshold:     73 Celsius
+
+Supported Power States
+St Op     Max   Active     Idle   RL RT WL WT  Ent_Lat  Ex_Lat
+ 0 +     6.80W       -        -    0  0  0  0        0       0
+ 1 +     5.60W       -        -    1  1  1  1        0       0
+ 2 +     4.40W       -        -    2  2  2  2        0       0
+ 3 -   0.0400W       -        -    3  3  3  3      210    1500
+ 4 -   0.0050W       -        -    4  4  4  4     2200    6000
+
+Supported LBA Sizes (NSID 0x1)
+Id Fmt  Data  Metadt  Rel_Perf
+ 0 +     512       0         0
+
+=== START OF SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+SMART/Health Information (NVMe Log 0x02)
+Critical Warning:                   0x00
+Temperature:                        34 Celsius
+Available Spare:                    100%
+Available Spare Threshold:          5%
+Percentage Used:                    0%
+Data Units Read:                    403,602 [206 GB]
+Data Units Written:                 1,614,621 [826 GB]
+Host Read Commands:                 3,462,290
+Host Write Commands:                6,640,648
+Controller Busy Time:               26
+Power Cycles:                       313
+Power On Hours:                     46,035
+Unsafe Shutdowns:                   57
+Media and Data Integrity Errors:    0
+Error Information Log Entries:      2,895
+Warning  Comp. Temperature Time:    0
+Critical Comp. Temperature Time:    0
+Temperature Sensor 1:               34 Celsius
+Temperature Sensor 2:               39 Celsius
+
+Error Information (NVMe Log 0x01, 16 of 64 entries)
+Num   ErrCount  SQId   CmdId  Status  PELoc          LBA  NSID    VS  Message
+  0       2895     0  0x4016  0x4004      -            0     0     -  Invalid Field in Command
+  1       2894     0  0x000e  0x4016  0x004            0     1     -  Invalid Namespace or Format
+  2       2893     0  0x0007  0x4004      -            0     0     -  Invalid Field in Command
+  3       2892     0  0x000e  0x4016  0x004            0     1     -  Invalid Namespace or Format
+  4       2891     0  0x0007  0x4004      -            0     0     -  Invalid Field in Command
+  5       2890     0  0x000e  0x4016  0x004            0     1     -  Invalid Namespace or Format
+  6       2889     0  0x0007  0x4004      -            0     0     -  Invalid Field in Command
+  7       2888     0  0x000e  0x4016  0x004            0     1     -  Invalid Namespace or Format
+  8       2887     0  0x0007  0x4004      -            0     0     -  Invalid Field in Command
+  9       2886     0  0x000e  0x4016  0x004            0     1     -  Invalid Namespace or Format
+ 10       2885     0  0x0007  0x4004      -            0     0     -  Invalid Field in Command
+ 11       2884     0  0x1012  0x4004      -            0     0     -  Invalid Field in Command
+ 12       2883     0  0x000e  0x4016  0x004            0     1     -  Invalid Namespace or Format
+ 13       2882     0  0x0007  0x4004      -            0     0     -  Invalid Field in Command
+ 14       2881     0  0x0018  0x4004      -            0     0     -  Invalid Field in Command
+ 15       2880     0  0x000e  0x4016  0x004            0     1     -  Invalid Namespace or Format
+... (48 entries not read)
+
+Self-test Log (NVMe Log 0x06)
+Self-test status: No self-test in progress
+No Self-tests Logged
+
+
+
+=== BIOS & DMI Info ===
+# dmidecode 3.5
+Getting SMBIOS data from sysfs.
+SMBIOS 3.2.0 present.
+
+Handle 0x0000, DMI type 0, 26 bytes
+BIOS Information
+	Vendor: Dell Inc.
+	Version: 1.38.1
+	Release Date: 08/27/2025
+	Address: 0xF0000
+	Runtime Size: 64 kB
+	ROM Size: 24 MB
+	Characteristics:
+		PCI is supported
+		PNP is supported
+		BIOS is upgradeable
+		BIOS shadowing is allowed
+		Boot from CD is supported
+		Selectable boot is supported
+		EDD is supported
+		Japanese floppy for NEC 9800 1.2 MB is supported (int 13h)
+		5.25"/1.2 MB floppy services are supported (int 13h)
+		3.5"/720 kB floppy services are supported (int 13h)
+		3.5"/2.88 MB floppy services are supported (int 13h)
+		Print screen service is supported (int 5h)
+		8042 keyboard services are supported (int 9h)
+		Serial services are supported (int 14h)
+		Printer services are supported (int 17h)
+		ACPI is supported
+		USB legacy is supported
+		Smart battery is supported
+		BIOS boot specification is supported
+		Function key-initiated network boot is supported
+		Targeted content distribution is supported
+		UEFI is supported
+	BIOS Revision: 1.38
+
+Handle 0x0001, DMI type 1, 27 bytes
+System Information
+	Manufacturer: Dell Inc.
+	Product Name: Latitude 5410
+	Version: Not Specified
+	Serial Number: JHYN693
+	UUID: 4c4c4544-0048-5910-804e-cac04f363933
+	Wake-up Type: Power Switch
+	SKU Number: 09A0
+	Family: Latitude
+
+Handle 0x0002, DMI type 2, 15 bytes
+Base Board Information
+	Manufacturer: Dell Inc.
+	Product Name: 02FGH4
+	Version: A01
+	Serial Number: /JHYN693/CNCMK000C327B3/
+	Asset Tag: Not Specified
+	Features:
+		Board is a hosting board
+		Board is replaceable
+	Location In Chassis: Not Specified
+	Chassis Handle: 0x0003
+	Type: Motherboard
+	Contained Object Handles: 0
+
+Handle 0x0004, DMI type 10, 6 bytes
+On Board Device Information
+	Type: Video
+	Status: Enabled
+	Description: "Intel HD Graphics"
+
+Handle 0x0006, DMI type 12, 5 bytes
+System Configuration Options
+	Option 1: Default string
+
+Handle 0x0007, DMI type 15, 35 bytes
+System Event Log
+	Area Length: 4 bytes
+	Header Start Offset: 0x0000
+	Header Length: 2 bytes
+	Data Start Offset: 0x0002
+	Access Method: Indexed I/O, one 16-bit index port, one 8-bit data port
+	Access Address: Index 0x046A, Data 0x046C
+	Status: Invalid, Not Full
+	Change Token: 0x00000000
+	Header Format: No Header
+	Supported Log Type Descriptors: 6
+	Descriptor 1: End of log
+	Data Format 1: OEM-specific
+	Descriptor 2: End of log
+	Data Format 2: OEM-specific
+	Descriptor 3: End of log
+	Data Format 3: OEM-specific
+	Descriptor 4: End of log
+	Data Format 4: OEM-specific
+	Descriptor 5: End of log
+	Data Format 5: OEM-specific
+	Descriptor 6: End of log
+	Data Format 6: OEM-specific
+
+Handle 0x000E, DMI type 32, 20 bytes
+System Boot Information
+	Status: No errors detected
+
+Handle 0xF034, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:00.0
+
+Handle 0xF035, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Video
+	Type: Video
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:02.0
+
+Handle 0xF036, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 2
+	Bus Address: 0000:00:04.0
+
+Handle 0xF037, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 3
+	Bus Address: 0000:00:08.0
+
+Handle 0xF038, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 4
+	Bus Address: 0000:00:12.0
+
+Handle 0xF039, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 5
+	Bus Address: 0000:00:14.0
+
+Handle 0xF03A, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 6
+	Bus Address: 0000:00:14.2
+
+Handle 0xF03B, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Ethernet
+	Type: Ethernet
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:14.3
+
+Handle 0xF03C, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 7
+	Bus Address: 0000:00:15.0
+
+Handle 0xF03D, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 8
+	Bus Address: 0000:00:15.1
+
+Handle 0xF03E, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 9
+	Bus Address: 0000:00:16.0
+
+Handle 0xF03F, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - SATA
+	Type: SATA Controller
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:17.0
+
+Handle 0xF040, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 10
+	Bus Address: 0000:00:19.0
+
+Handle 0xF041, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 11
+	Bus Address: 0000:00:1f.0
+
+Handle 0xF042, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Sound
+	Type: Sound
+	Status: Enabled
+	Type Instance: 1
+	Bus Address: 0000:00:1f.3
+
+Handle 0xF043, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 12
+	Bus Address: 0000:00:1f.4
+
+Handle 0xF044, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Other
+	Type: Other
+	Status: Enabled
+	Type Instance: 13
+	Bus Address: 0000:00:1f.5
+
+Handle 0xF045, DMI type 41, 11 bytes
+Onboard Device
+	Reference Designation: Onboard - Ethernet
+	Type: Ethernet
+	Status: Enabled
+	Type Instance: 2
+	Bus Address: 0000:00:1f.6
+
+Handle 0xF053, DMI type 13, 22 bytes
+BIOS Language Information
+	Language Description Format: Long
+	Installable Languages: 2
+		en|US|iso8859-1
+		<BAD INDEX>
+	Currently Installed Language: en|US|iso8859-1
+
+
+
+=== Battery Info ===
+  native-path:          BAT0
+  vendor:               LGC-LGC3.685
+  model:                DELL XV8CJ0B
+  serial:               2334
+  power supply:         yes
+  updated:              Fri 17 Oct 2025 07:25:34 PM PDT (1 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  battery
+    present:             yes
+    rechargeable:        yes
+    state:               charging
+    warning-level:       none
+    energy:              4.9932 Wh
+    energy-empty:        0 Wh
+    energy-full:         18.924 Wh
+    energy-full-design:  42.009 Wh
+    energy-rate:         9.747 W
+    voltage:             11.579 V
+    charge-cycles:       N/A
+    time to full:        1.4 hours
+    percentage:          26%
+    capacity:            45.0475%
+    technology:          lithium-ion
+    icon-name:          'battery-low-charging-symbolic'
+  History (charge):
+    1760754334	26.000	charging
+    1760754244	25.000	charging
+  History (rate):
+    1760754244	9.747	charging
+
+
+
+=== Network Adapters ===
+  *-network:0
+       description: Wireless interface
+       product: Comet Lake PCH-LP CNVi WiFi
+       vendor: Intel Corporation
+       physical id: 14.3
+       bus info: pci@0000:00:14.3
+       logical name: wlo1
+       version: 00
+       serial: 68:54:5a:e8:a2:6f
+       width: 64 bits
+       clock: 33MHz
+       capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical wireless
+       configuration: broadcast=yes driver=iwlwifi driverversion=6.14.0-33-generic firmware=77.b405f9d4.0 QuZ-a0-hr-b0-77.u ip=192.168.88.7 latency=0 link=yes multicast=yes wireless=IEEE 802.11
+       resources: irq:16 memory:9133c000-9133ffff
+  *-network:1
+       description: Ethernet interface
+       product: Ethernet Connection (10) I219-V
+       vendor: Intel Corporation
+       physical id: 1f.6
+       bus info: pci@0000:00:1f.6
+       logical name: eno2
+       version: 00
+       serial: 74:78:27:2d:ba:1d
+       capacity: 1Gbit/s
+       width: 32 bits
+       clock: 33MHz
+       capabilities: pm msi bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+       configuration: autonegotiation=on broadcast=yes driver=e1000e driverversion=6.14.0-33-generic firmware=0.6-4 latency=0 link=no multicast=yes port=twisted pair
+       resources: irq:142 memory:91300000-9131ffff
+
+
+=== RFKill (Wireless/Bluetooth status) ===
+0: hci0: Bluetooth
+	Soft blocked: no
+	Hard blocked: no
+1: dell-wifi: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+2: dell-bluetooth: Bluetooth
+	Soft blocked: no
+	Hard blocked: no
+3: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+
+
+=== TPM Devices ===
+No TPM device
+
+
+=== TPM Capabilities ===
+
+
+
+=== Potential Fingerprint or NFC devices (USB) ===
+None detected
+
+
+=== Smartcard Readers ===
+PC/SC device scanner
+V 1.7.1 (c) 2001-2022, Ludovic Rousseau <ludovic.rousseau@free.fr>
+pcsc_scan not installed or no readers
+
+
+=== Fingerprint users ===
+Usage: fprintd-list <username> [usernames...]
+fprintd not installed or no enrolled users
+
+
+=== WWAN Modems ===
+No modems were found
+
+
+=== Bluetooth Controller Info ===
+Controller 68:54:5A:E8:A2:73 (public)
+	Manufacturer: 0x0002 (2)
+	Version: 0x0b (11)
+	Name: mc20000-laptop
+	Alias: mc20000-laptop
+	Class: 0x006c010c (7078156)
+	Powered: yes
+	Discoverable: no
+	DiscoverableTimeout: 0x000000b4 (180)
+	Pairable: no
+	UUID: A/V Remote Control        (0000110e-0000-1000-8000-00805f9b34fb)
+	UUID: Handsfree Audio Gateway   (0000111f-0000-1000-8000-00805f9b34fb)
+	UUID: PnP Information           (00001200-0000-1000-8000-00805f9b34fb)
+	UUID: Audio Sink                (0000110b-0000-1000-8000-00805f9b34fb)
+	UUID: Audio Source              (0000110a-0000-1000-8000-00805f9b34fb)
+	UUID: A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)
+	UUID: Generic Access Profile    (00001800-0000-1000-8000-00805f9b34fb)
+	UUID: Generic Attribute Profile (00001801-0000-1000-8000-00805f9b34fb)
+	UUID: Device Information        (0000180a-0000-1000-8000-00805f9b34fb)
+	UUID: Handsfree                 (0000111e-0000-1000-8000-00805f9b34fb)
+	Modalias: usb:v1D6Bp0246d0548
+	Discovering: no
+	Roles: central
+	Roles: peripheral
+Advertising Features:
+	ActiveInstances: 0x00 (0)
+	SupportedInstances: 0x0c (12)
+	SupportedIncludes: tx-power
+	SupportedIncludes: appearance
+	SupportedIncludes: local-name
+	SupportedSecondaryChannels: 1M
+	SupportedSecondaryChannels: 2M
+
+
+=== Bluetooth Devices ===
+(no output)
+
+
+=== Video Capture Devices ===
+Integrated_Webcam_HD: Integrate (usb-0000:00:14.0-6):
+	/dev/video0
+	/dev/video1
+	/dev/media0
+
+
+
+=== Thunderbolt Devices ===
+(no output)
+
+
+=== Thermal Sensors ===
+coretemp-isa-0000
+Adapter: ISA adapter
+Package id 0:  +70.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 0:        +66.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 1:        +66.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 2:        +68.0°C  (high = +100.0°C, crit = +100.0°C)
+Core 3:        +70.0°C  (high = +100.0°C, crit = +100.0°C)
+
+dell_smm-isa-0000
+Adapter: ISA adapter
+fan1:           0 RPM  (min =    0 RPM, max = 5300 RPM)
+temp1:        +58.0°C  
+temp2:        +45.0°C  
+temp3:        +40.0°C  
+temp4:        +35.0°C  
+
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           5.00 V  (min =  +5.00 V, max =  +5.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+BAT0-acpi-0
+Adapter: ACPI interface
+in0:          11.58 V  
+curr1:       857.00 mA 
+
+iwlwifi_1-virtual-0
+Adapter: Virtual device
+temp1:        +38.0°C  
+
+pch_cannonlake-virtual-0
+Adapter: Virtual device
+temp1:        +49.0°C  
+
+nvme-pci-0200
+Adapter: PCI adapter
+Composite:    +33.9°C  (low  = -273.1°C, high = +69.8°C)
+                       (crit = +72.8°C)
+Sensor 1:     +33.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +38.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+acpitz-acpi-0
+Adapter: ACPI interface
+temp1:        +25.0°C  
+
+
+
+=== Input Devices ===
+N: Name="Lid Switch"
+P: Phys=PNP0C0D/button/input0
+H: Handlers=event0 
+N: Name="Power Button"
+P: Phys=PNP0C0C/button/input0
+H: Handlers=kbd event1 
+N: Name="Sleep Button"
+P: Phys=PNP0C0E/button/input0
+H: Handlers=kbd event2 
+N: Name="AT Translated Set 2 keyboard"
+P: Phys=isa0060/serio0/input0
+H: Handlers=sysrq kbd event3 leds 
+N: Name="DELL09A0:00 0488:120A Mouse"
+P: Phys=i2c-DELL09A0:00
+H: Handlers=mouse0 event4 
+N: Name="DELL09A0:00 0488:120A Touchpad"
+P: Phys=i2c-DELL09A0:00
+H: Handlers=mouse1 event5 
+N: Name="DELL09A0:00 0488:120A UNKNOWN"
+P: Phys=i2c-DELL09A0:00
+H: Handlers=kbd event6 
+N: Name="PS/2 Generic Mouse"
+P: Phys=isa0060/serio1/input0
+H: Handlers=mouse2 event7 
+N: Name="Intel HID events"
+P: Phys=
+H: Handlers=rfkill kbd event8 
+N: Name="Intel HID 5 button array"
+P: Phys=
+H: Handlers=kbd event9 
+N: Name="Dell WMI hotkeys"
+P: Phys=
+H: Handlers=rfkill kbd event10 
+N: Name="Video Bus"
+P: Phys=LNXVIDEO/video/input0
+H: Handlers=kbd event11 
+N: Name="HDA Intel PCH Headphone Mic"
+P: Phys=ALSA
+H: Handlers=event12 
+N: Name="HDA Intel PCH HDMI/DP,pcm=3"
+P: Phys=ALSA
+H: Handlers=event13 
+N: Name="HDA Intel PCH HDMI/DP,pcm=7"
+P: Phys=ALSA
+H: Handlers=event14 
+N: Name="HDA Intel PCH HDMI/DP,pcm=8"
+P: Phys=ALSA
+H: Handlers=event15 
+
+
+=== ACPI Devices ===
+ACPI0003:00
+ACPI0008:00
+ACPI000C:00
+ACPI000E:00
+DELL0029:00
+DELL09A0:00
+device:00
+device:01
+device:02
+device:03
+device:04
+device:05
+device:06
+device:07
+device:08
+device:09
+device:0a
+device:0b
+device:0c
+device:0d
+device:0e
+device:0f
+device:10
+device:11
+device:12
+device:13
+device:14
+device:15
+device:16
+device:17
+device:18
+device:19
+device:1a
+device:1b
+device:1c
+device:1d
+device:1e
+device:1f
+device:20
+device:21
+device:22
+device:23
+device:24
+device:25
+device:26
+device:27
+device:28
+device:29
+device:2a
+device:2b
+device:2c
+device:2d
+device:2e
+device:2f
+device:30
+device:31
+device:32
+device:33
+device:34
+device:35
+device:36
+device:37
+device:38
+device:39
+device:3a
+device:3b
+device:3c
+device:3d
+device:3e
+device:3f
+device:40
+device:41
+device:42
+device:43
+device:44
+device:45
+device:46
+device:47
+device:48
+device:49
+device:4a
+device:4b
+device:4c
+device:4d
+device:4e
+device:4f
+device:50
+device:51
+device:52
+device:53
+device:54
+device:55
+device:56
+device:57
+device:58
+device:59
+device:5a
+device:5b
+device:5c
+device:5d
+device:5e
+device:5f
+device:60
+device:61
+device:62
+device:63
+device:64
+device:65
+device:66
+device:67
+device:68
+device:69
+device:6a
+device:6b
+device:6c
+device:6d
+device:6e
+device:6f
+device:70
+device:71
+device:72
+device:73
+device:74
+device:75
+device:76
+device:77
+device:78
+device:79
+device:7a
+device:7b
+device:7c
+device:7d
+device:7e
+device:7f
+device:80
+device:81
+device:82
+device:83
+device:84
+device:85
+DLL09A0:00
+DLLK09A0:00
+INT0000:00
+INT0E0C:00
+INT339B:00
+INT33A1:00
+INT33D5:00
+INT3400:00
+INT3403:00
+INT3403:01
+INT3403:02
+INT3403:03
+INT340E:00
+INT34BB:00
+INT3515:00
+INT3515:01
+INT3519:00
+INT3F0D:00
+LNXCPU:00
+LNXCPU:01
+LNXCPU:02
+LNXCPU:03
+LNXCPU:04
+LNXCPU:05
+LNXCPU:06
+LNXCPU:07
+LNXCPU:08
+LNXCPU:09
+LNXCPU:0a
+LNXCPU:0b
+LNXCPU:0c
+LNXCPU:0d
+LNXCPU:0e
+LNXCPU:0f
+LNXCPU:10
+LNXCPU:11
+LNXCPU:12
+LNXCPU:13
+LNXPOWER:00
+LNXPOWER:01
+LNXPOWER:02
+LNXPOWER:03
+LNXPOWER:04
+LNXPOWER:05
+LNXPOWER:06
+LNXPOWER:07
+LNXSYBUS:00
+LNXSYBUS:01
+LNXSYSTM:00
+LNXTHERM:00
+LNXVIDEO:00
+MAX34407:00
+MCHP1930:00
+MCHP1930:01
+MCHP1930:02
+MCHP1930:03
+PNP0000:00
+PNP0100:00
+PNP0103:00
+PNP0A08:00
+PNP0B00:00
+PNP0C02:00
+PNP0C02:01
+PNP0C02:02
+PNP0C02:03
+PNP0C02:04
+PNP0C04:00
+PNP0C09:00
+PNP0C09:01
+PNP0C0A:00
+PNP0C0A:01
+PNP0C0C:00
+PNP0C0D:00
+PNP0C0E:00
+PNP0C0F:00
+PNP0C0F:01
+PNP0C0F:02
+PNP0C0F:03
+PNP0C0F:04
+PNP0C0F:05
+PNP0C0F:06
+PNP0C0F:07
+PNP0C14:00
+PNP0C14:01
+PNP0C14:02
+PNP0C14:03
+PNP0C14:04
+PNP0C14:05
+PNP0C14:06
+PNP0C14:07
+PNP0C31:00
+PRP00001:00
+SMO8810:00
+USBC000:00
+XXXX0000:00
+XXXX0000:01
+XXXX0000:02
+XXXX0000:03
+XXXX0000:04
+
+
+=== Audio Output Devices ===
+**** List of PLAYBACK Hardware Devices ****
+card 0: PCH [HDA Intel PCH], device 0: ALC3204 Analog [ALC3204 Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: PCH [HDA Intel PCH], device 3: HDMI 0 [HDMI 0]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: PCH [HDA Intel PCH], device 7: HDMI 1 [HDMI 1]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+card 0: PCH [HDA Intel PCH], device 8: HDMI 2 [HDMI 2]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+
+=== Audio Input Devices ===
+**** List of CAPTURE Hardware Devices ****
+card 0: PCH [HDA Intel PCH], device 0: ALC3204 Analog [ALC3204 Analog]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+
+=== Kernel Log (filtered last 500 lines) ===
+[59060.429932] audit: type=1400 audit(1760736330.352:199): apparmor="DENIED" operation="open" class="file" profile="snap.firmware-updater.firmware-notifier" name="/proc/sys/vm/max_map_count" pid=10368 comm="firmware-notifi" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[63082.652666] audit: type=1400 audit(1760740353.323:202): apparmor="DENIED" operation="open" class="file" profile="snap.firmware-updater.firmware-notifier" name="/proc/sys/vm/max_map_count" pid=11430 comm="firmware-notifi" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[66021.985523] audit: type=1107 audit(1760743292.258:207): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.220" pid=12997 label="snap.firefox.firefox" peer_pid=13123 peer_label="unconfined"
+[66021.986006] audit: type=1107 audit(1760743292.259:208): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.220" pid=12997 label="snap.firefox.firefox" peer_pid=13123 peer_label="unconfined"
+[70372.338210] audit: type=1107 audit(1760747642.335:209): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.300" pid=17163 label="snap.firefox.firefox" peer_pid=17288 peer_label="unconfined"
+[70372.340755] audit: type=1107 audit(1760747642.338:210): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.300" pid=17163 label="snap.firefox.firefox" peer_pid=17288 peer_label="unconfined"
+[71944.212689] audit: type=1400 audit(1760749213.911:211): apparmor="DENIED" operation="open" class="file" profile="snap.firmware-updater.firmware-notifier" name="/proc/sys/vm/max_map_count" pid=19278 comm="firmware-notifi" requested_mask="r" denied_mask="r" fsuid=1000 ouid=0
+[73927.890404] audit: type=1107 audit(1760751198.774:230): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.367" pid=22208 label="snap.firefox.firefox" peer_pid=22332 peer_label="unconfined"
+[73927.891263] audit: type=1107 audit(1760751198.775:231): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.367" pid=22208 label="snap.firefox.firefox" peer_pid=22332 peer_label="unconfined"
+[74952.161047] audit: type=1107 audit(1760752223.053:251): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.402" pid=25560 label="snap.firefox.firefox" peer_pid=25683 peer_label="unconfined"
+[74952.162371] audit: type=1107 audit(1760752223.055:252): pid=801 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor="DENIED" operation="dbus_method_call"  bus="system" path="/org/freedesktop/timedate1" interface="org.freedesktop.DBus.Properties" member="GetAll" mask="send" name=":1.402" pid=25560 label="snap.firefox.firefox" peer_pid=25683 peer_label="unconfined"
+
+
+=== Docking Status ===
+10
+
+
+=== Power Source ===
+    state:               charging
+    percentage:          26%
+    state:               charging
+    percentage:          26%
